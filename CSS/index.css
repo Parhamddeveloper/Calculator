@@ -177,3 +177,19 @@ body {
     background-color: rgb(210, 70, 70);
     border:none;
 }
+
+/* Theme */
+
+.ThemeBtn{
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    font-size: 50px;
+    background: transparent;
+    color: red;
+    transition: 0.2s;
+    border: none;
+}
+.ThemeBtn:hover{
+    color: blue;
+}
