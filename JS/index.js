@@ -97,3 +97,17 @@ function init() {
 }
 
 init();
+
+//Theme Section
+let ThemeBtn = document.querySelector('.ThemeBtn')
+let ThemeSelectorDiv = document.querySelector('.ThemeSelector')
+ThemeBtn.addEventListener('click', function(){
+    if(ThemeSelectorDiv.classList.contains('Invisible')){
+    ThemeSelectorDiv.classList.remove('Invisible','Anim2')
+    ThemeSelectorDiv.classList.add('Anim1')
+    }
+    else{
+        ThemeSelectorDiv.classList.add('Invisible', 'Anim2')
+        ThemeSelectorDiv.classList.remove('Anim1')
+    }
+})
