@@ -37,6 +37,7 @@ function handleSymbol(Symbol) {
                 Buffer.length = Buffer.length - 1
             }
             break;
+        case '%':
         case '+':
         case '-':
         case '×':
@@ -74,6 +75,9 @@ function flushOperation(intBuffer) {
     }
     else if (PreviousOperator === '÷') {
         RunningTotal /= intBuffer;
+    }
+    else if(PreviousOperator === '%'){
+        RunningTotal %= intBuffer;
     }
 }
 function handleNumber(numberString) {
