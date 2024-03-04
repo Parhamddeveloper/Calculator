@@ -99,10 +99,11 @@ function init() {
 init();
 
 //Theme Section
-let ThemeBtn = document.querySelector('.ThemeBtn')
-let ThemeSelectorDiv = document.querySelector('.ThemeSelector')
-let EffectBtn = document.querySelector('.EffectsBtn')
-let EffectSelectorDiv = document.querySelector('.EffectSelector')
+let ThemeBtn = document.querySelector('.ThemeBtn');
+let ThemeSelectorDiv = document.querySelector('.ThemeSelector');
+let EffectBtn = document.querySelector('.EffectsBtn');
+let EffectSelectorDiv = document.querySelector('.EffectSelector');
+let OffcanvasThemeDiv = document.querySelector('.ThemeDivSelector');
 //Event Listeners
 ThemeBtn.addEventListener('click', function (e) {
     if (ThemeSelectorDiv.classList.contains('Invisible')) {
@@ -183,7 +184,7 @@ EffectSelectorDiv.addEventListener('click', function (e) {
         }
         EffectSelectorDiv.classList.add('Invisible', 'Anim2')
     }
-    else if(e.target.id == "BothEffect"){
+    else if (e.target.id == "BothEffect") {
         const Bubbles = document.querySelectorAll('.bubble')
         for (const box of Bubbles) {
             box.classList.remove('Invisible');
@@ -194,5 +195,67 @@ EffectSelectorDiv.addEventListener('click', function (e) {
         }
         EffectSelectorDiv.classList.add('Invisible', 'Anim2')
 
+    }
+})
+
+OffcanvasThemeDiv.addEventListener('click', function (e) {
+    if (e.target.id == "DarkTheme1") {
+        document.body.classList.remove('GradientAnim1', 'GradientAnim3')
+        document.body.classList.add('GradientAnim2')
+        OffcanvasThemeDiv.classList.remove('BG-1', 'BG-3')
+        OffcanvasThemeDiv.classList.add('BG-2')
+    }
+    else if (e.target.id == "LightTheme1") {
+        document.body.classList.remove('GradientAnim2', 'GradientAnim3')
+        document.body.classList.add('GradientAnim1')
+        OffcanvasThemeDiv.classList.remove('BG-2', 'BG-3')
+        OffcanvasThemeDiv.classList.add('BG-1')
+    }
+    else if (e.target.id == "YellowRedTheme1") {
+        document.body.classList.remove('GradientAnim2', 'GradientAnim1')
+        document.body.classList.add('GradientAnim3')
+        OffcanvasThemeDiv.classList.remove('BG-1', 'BG-2')
+        OffcanvasThemeDiv.classList.add('BG-3')
+    }
+    else if (e.target.id == "BubbleEffect1") {
+        const Bubbles = document.querySelectorAll('.bubble')
+        for (const box of Bubbles) {
+            box.classList.remove('Invisible');
+        }
+        const Dots = document.querySelectorAll('.Dot')
+        for (const Dot of Dots) {
+            Dot.classList.add('Invisible');
+        }
+    }
+    else if (e.target.id == "DotsEffect1") {
+        const Dots = document.querySelectorAll('.Dot')
+        for (const Dot of Dots) {
+            Dot.classList.remove('Invisible');
+        }
+        const Bubbles = document.querySelectorAll('.bubble')
+
+        for (const box of Bubbles) {
+            box.classList.add('Invisible');
+        }
+    }
+    else if (e.target.id == "BothEffect1") {
+        const Bubbles = document.querySelectorAll('.bubble')
+        for (const box of Bubbles) {
+            box.classList.remove('Invisible');
+        }
+        const Dots = document.querySelectorAll('.Dot')
+        for (const Dot of Dots) {
+            Dot.classList.remove('Invisible');
+        }
+    }
+    else if (e.target.id == "NoEffect1") {
+        const Bubbles = document.querySelectorAll('.bubble')
+        for (const box of Bubbles) {
+            box.classList.add('Invisible');
+        }
+        const Dots = document.querySelectorAll('.Dot')
+        for (const Dot of Dots) {
+            Dot.classList.add('Invisible');
+        }
     }
 })
