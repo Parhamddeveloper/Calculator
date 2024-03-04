@@ -1,3 +1,8 @@
+@media screen and (max-width:620px) {
+    .ThemeBtn{
+        display: none;
+    }
+}
 html {
     height: 100vh;
     box-sizing: border-box;
@@ -10,17 +15,18 @@ html {
 }
 
 body {
-    background: linear-gradient(231deg, #28e2b2, #2f78c5);
-    background-size: 400% 400%;
-    -webkit-animation: GradientAnim 24s ease infinite;
-    -moz-animation: GradientAnim 24s ease infinite;
-    animation: GradientAnim 24s ease infinite;
     display: flex;
     height: inherit;
     justify-content: center;
     align-items: center;
 }
-
+.GradientAnim1{
+    background: linear-gradient(231deg, #28e2b2, #2f78c5);
+    background-size: 400% 400%;
+    -webkit-animation: GradientAnim 24s ease infinite;
+    -moz-animation: GradientAnim 24s ease infinite;
+    animation: GradientAnim 24s ease infinite; 
+}
 @-webkit-keyframes GradientAnim {
     0% {
         background-position: 92% 0%
@@ -74,7 +80,8 @@ body {
     flex-basis: 400px;
     height: 540px;
     padding: 20px 35px;
-
+    user-select: none;
+    -webkit-user-select: none;
 }
 .Screen{
     backdrop-filter: blur(5.5px);
@@ -85,6 +92,8 @@ body {
     padding: 20px;
     overflow: auto;
     text-align: right;
+    user-select: none;
+    -webkit-user-select: none;
 }
 .BTNRow{
     display: flex;
@@ -101,6 +110,7 @@ body {
     height: 65px;
     font-size: 19px;
     transition: 0.3s;
+    cursor: pointer;
 }
 #Double{
     flex-basis: 20%;
@@ -199,17 +209,25 @@ body {
     top: 90px;
     left: 30px;
     margin-top: 10px;
-    border: 0.2px solid;
     border-collapse: collapse;
     transition: 0.2s;
-    background-color: rgb(236, 209, 209);
 }
 .ThemeSelector button{
+    margin-top: 10px;
+    border-radius: 10px;
     padding: 10px;
     font-size: 22px;
     display: inherit;
     background-color: white;
     cursor: pointer;
+    width: 250px;
+    border: 2px solid red;
+    transition: 0.3s;
+}
+.ThemeSelector button:hover{
+    background-color: #31455a;
+    color: white;
+    border: 2px solid yellow;
 }
 .Anim1{
     animation: Anim1 0.6s forwards;
@@ -236,4 +254,52 @@ body {
     100%{
         opacity: 0;
     }
+}
+.GradientAnim2{
+    background: linear-gradient(238deg, #3d0c7a, #070608);
+    background-size: 400% 400%;
+
+    -webkit-animation: GradientAnim2 20s ease infinite;
+    -moz-animation: GradientAnim2 20s ease infinite;
+    animation: GradientAnim2 20s ease infinite;
+}
+
+@-webkit-keyframes GradientAnim2 {
+    0%{background-position:0% 91%}
+    50%{background-position:100% 10%}
+    100%{background-position:0% 91%}
+}
+@-moz-keyframes GradientAnim2 {
+    0%{background-position:0% 91%}
+    50%{background-position:100% 10%}
+    100%{background-position:0% 91%}
+}
+@keyframes GradientAnim2 {
+    0%{background-position:0% 91%}
+    50%{background-position:100% 10%}
+    100%{background-position:0% 91%}
+}
+.GradientAnim3 {
+    background: linear-gradient(238deg, #f96167, #f9e795);
+    background-size: 400% 400%;
+
+    -webkit-animation: GradientAnim3 16s ease infinite;
+    -moz-animation: GradientAnim3 16s ease infinite;
+    animation: GradientAnim3 16s ease infinite;
+}
+
+@-webkit-keyframes GradientAnim3 {
+    0%{background-position:0% 91%}
+    50%{background-position:100% 10%}
+    100%{background-position:0% 91%}
+}
+@-moz-keyframes GradientAnim3 {
+    0%{background-position:0% 91%}
+    50%{background-position:100% 10%}
+    100%{background-position:0% 91%}
+}
+@keyframes GradientAnim3 {
+    0%{background-position:0% 91%}
+    50%{background-position:100% 10%}
+    100%{background-position:0% 91%}
 }

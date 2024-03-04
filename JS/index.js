@@ -101,7 +101,7 @@ init();
 //Theme Section
 let ThemeBtn = document.querySelector('.ThemeBtn')
 let ThemeSelectorDiv = document.querySelector('.ThemeSelector')
-ThemeBtn.addEventListener('click', function(){
+ThemeBtn.addEventListener('click', function(e){
     if(ThemeSelectorDiv.classList.contains('Invisible')){
     ThemeSelectorDiv.classList.remove('Invisible','Anim2')
     ThemeSelectorDiv.classList.add('Anim1')
@@ -109,5 +109,26 @@ ThemeBtn.addEventListener('click', function(){
     else{
         ThemeSelectorDiv.classList.add('Invisible', 'Anim2')
         ThemeSelectorDiv.classList.remove('Anim1')
+    }
+
+})
+ThemeSelectorDiv.addEventListener('click', function(e){
+    if(e.target.id == "DarkTheme"){
+        document.body.classList.remove('GradientAnim1', 'GradientAnim3')
+        document.body.classList.add('GradientAnim2')
+        ThemeSelectorDiv.classList.add('Invisible', 'Anim2')
+    }
+    else if(e.target.id == "LightTheme"){
+        document.body.classList.remove('GradientAnim2' , 'GradientAnim3')
+        document.body.classList.add('GradientAnim1')
+        ThemeSelectorDiv.classList.add('Invisible', 'Anim2')
+
+
+    }
+    else if(e.target.id == "YellowRedTheme"){
+        document.body.classList.remove('GradientAnim2' , 'GradientAnim1')
+        document.body.classList.add('GradientAnim3')
+        ThemeSelectorDiv.classList.add('Invisible', 'Anim2')
+
     }
 })
