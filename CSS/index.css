@@ -1,791 +1,940 @@
-@media screen and (max-width:768px) {
-
-    .ThemeBtn,
-    .EffectsBtn,
-    .EffectSelector,
-    .ThemeSelector {
-        display: none;
-    }
+@media screen and (max-width: 768px) {
+  .ThemeBtn,
+  .EffectsBtn,
+  .EffectSelector,
+  .ThemeSelector {
+    display: none;
+  }
+  .ToggleBTN {
+    display: flex;
+    gap: 6px;
+  }
 }
 
-@media screen and (min-width:769px) {
-    .ThemeEffectBtn {
-        display: none;
-    }
+@media screen and (min-width: 769px) {
+  .ThemeEffectBtn {
+    display: none;
+  }
+  .ToggleBTN {
+    display: none;
+  }
+  .offcanvas {
+    display: none;
+  }
 }
 
 html {
-    height: 100vh;
-    box-sizing: border-box;
+  height: 100vh;
+  box-sizing: border-box;
 }
 
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    display: flex;
-    height: inherit;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  height: inherit;
+  justify-content: center;
+  align-items: center;
 }
 
 .BG-1 {
-    background-color: #119e7a !important;
-    color: white !important;
+  background-color: #119e7a !important;
+  color: white !important;
 }
 
 .BG-2 {
-    background-color: #3d0c7a !important;
-    color: white !important;
+  background-color: #3d0c7a !important;
+  color: white !important;
 }
 
 .BG-3 {
-    background-color: #d75559 !important;
-    color: white !important;
-
+  background-color: #d75559 !important;
+  color: white !important;
 }
 
 .GradientAnim1 {
-    background: linear-gradient(231deg, #28e2b2, #2f78c5);
-    background-size: 400% 400%;
-    -webkit-animation: GradientAnim 24s ease infinite;
-    -moz-animation: GradientAnim 24s ease infinite;
-    animation: GradientAnim 24s ease infinite;
+  background: linear-gradient(231deg, #28e2b2, #2f78c5);
+  background-size: 400% 400%;
+  -webkit-animation: GradientAnim 24s ease infinite;
+  -moz-animation: GradientAnim 24s ease infinite;
+  animation: GradientAnim 24s ease infinite;
 }
 
 @-webkit-keyframes GradientAnim {
-    0% {
-        background-position: 92% 0%
-    }
+  0% {
+    background-position: 92% 0%;
+  }
 
-    50% {
-        background-position: 9% 100%
-    }
+  50% {
+    background-position: 9% 100%;
+  }
 
-    100% {
-        background-position: 92% 0%
-    }
+  100% {
+    background-position: 92% 0%;
+  }
 }
 
 @-moz-keyframes GradientAnim {
-    0% {
-        background-position: 92% 0%
-    }
+  0% {
+    background-position: 92% 0%;
+  }
 
-    50% {
-        background-position: 9% 100%
-    }
+  50% {
+    background-position: 9% 100%;
+  }
 
-    100% {
-        background-position: 92% 0%
-    }
+  100% {
+    background-position: 92% 0%;
+  }
 }
 
 @keyframes GradientAnim {
-    0% {
-        background-position: 92% 0%
-    }
+  0% {
+    background-position: 92% 0%;
+  }
 
-    50% {
-        background-position: 9% 100%
-    }
+  50% {
+    background-position: 9% 100%;
+  }
 
-    100% {
-        background-position: 92% 0%
-    }
+  100% {
+    background-position: 92% 0%;
+  }
 }
 
 .Calculator {
-    backdrop-filter: blur(50px);
-    -webkit-backdrop-filter: blur(50px);
-    background-color: #15f2ba7d;
-    border: 1px solid rgba(255, 255, 255, 0.02);
-    border-radius: 20px;
-    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
-    color: rgb(27, 24, 24);
-    flex-basis: 400px;
-    height: 540px;
-    padding: 20px 35px;
-    user-select: none;
-    -webkit-user-select: none;
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  background-color: #15f2ba7d;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+  color: rgb(27, 24, 24);
+  flex-basis: 400px;
+  height: 540px;
+  padding: 20px 35px;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .Screen {
-    backdrop-filter: blur(5.5px);
-    border: 5px solid rgba(115, 70, 70, 0.302);
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 17px;
-    font-size: 35px;
-    padding: 20px;
-    overflow: auto;
-    text-align: right;
-    user-select: none;
-    -webkit-user-select: none;
-    max-width: 320px;
-    overflow: hidden;
+  backdrop-filter: blur(5.5px);
+  border: 5px solid rgba(115, 70, 70, 0.302);
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 17px;
+  font-size: 35px;
+  padding: 20px;
+  overflow: auto;
+  text-align: right;
+  user-select: none;
+  -webkit-user-select: none;
+  max-width: 320px;
+  overflow: hidden;
 }
 
 .BTNRow {
-    display: flex;
-    justify-content: space-between;
-    margin: 5% 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 5% 0;
 }
 
 .BTN {
-    backdrop-filter: blur(5.5px);
-    -webkit-backdrop-filter: blur(5.5px);
-    border: 1px solid gray;
-    flex-basis: 20%;
-    border-radius: 16px;
-    height: 65px;
-    font-size: 19px;
-    transition: 0.3s;
-    cursor: pointer;
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  border: 1px solid gray;
+  flex-basis: 20%;
+  border-radius: 16px;
+  height: 65px;
+  font-size: 19px;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 #Double {
-    flex-basis: 20%;
+  flex-basis: 20%;
 }
 
 #Num0 {
-    flex-basis: 73%;
+  flex-basis: 73%;
 }
 
 #Divide {
-    background-color: #c3dbf4;
+  background-color: #c3dbf4;
 }
 
 #Equal {
-    background-color: #d6b0bb;
+  background-color: #d6b0bb;
 }
 
 #Times {
-    background-color: #86a7fa;
+  background-color: #86a7fa;
 }
 
 #Minus {
-    background-color: #a27f98;
+  background-color: #a27f98;
 }
 
 #Plus {
-    background-color: #2c71d878;
+  background-color: #2c71d878;
 }
 
 .BTN:hover {
-    background-color: black;
-    color: white;
-    border: 1px solid skyblue;
+  background-color: black;
+  color: white;
+  border: 1px solid skyblue;
 }
 
 #Divide:hover {
-    background-color: black;
-    color: white;
-    border: 1px solid skyblue;
+  background-color: black;
+  color: white;
+  border: 1px solid skyblue;
 }
 
 #Times:hover {
-    background-color: black;
-    color: white;
-    border: 1px solid skyblue;
+  background-color: black;
+  color: white;
+  border: 1px solid skyblue;
 }
 
 #Minus:hover {
-    background-color: black;
-    color: white;
-    border: 1px solid skyblue;
+  background-color: black;
+  color: white;
+  border: 1px solid skyblue;
 }
 
 #Plus:hover {
-    background-color: black;
-    color: white;
-    border: 1px solid skyblue;
+  background-color: black;
+  color: white;
+  border: 1px solid skyblue;
 }
 
 #Equal:hover {
-    background-color: black;
-    color: white;
-    border: 1px solid skyblue;
+  background-color: black;
+  color: white;
+  border: 1px solid skyblue;
 }
 
 .BTN:active {
-    background-color: rgb(210, 70, 70);
-    border: none;
+  background-color: rgb(210, 70, 70);
+  border: none;
 }
 
 #Divide:active {
-    background-color: rgb(210, 70, 70);
-    border: none;
+  background-color: rgb(210, 70, 70);
+  border: none;
 }
 
 #Times:active {
-    background-color: rgb(210, 70, 70);
-    border: none;
+  background-color: rgb(210, 70, 70);
+  border: none;
 }
 
 #Minus:active {
-    background-color: rgb(210, 70, 70);
-    border: none;
+  background-color: rgb(210, 70, 70);
+  border: none;
 }
 
 #Plus:active {
-    background-color: rgb(210, 70, 70);
-    border: none;
+  background-color: rgb(210, 70, 70);
+  border: none;
 }
 
 #Equal:active {
-    background-color: rgb(210, 70, 70);
-    border: none;
+  background-color: rgb(210, 70, 70);
+  border: none;
 }
 
 /* Theme */
 
 .ThemeBtn {
-    position: absolute;
-    top: 40px;
-    left: 50px;
-    font-size: 50px;
-    background: transparent;
-    color: red;
-    transition: 0.2s;
-    border: none;
-    cursor: pointer;
+  position: absolute;
+  top: 40px;
+  left: 50px;
+  font-size: 50px;
+  background: transparent;
+  color: red;
+  transition: 0.2s;
+  border: none;
+  cursor: pointer;
 }
 
 .ThemeBtn:hover {
-    color: blue;
+  color: blue;
 }
 
 .ThemeSelector {
-    position: absolute;
-    top: 90px;
-    left: 30px;
-    margin-top: 10px;
-    border-collapse: collapse;
-    transition: 0.2s;
+  position: absolute;
+  top: 90px;
+  left: 30px;
+  margin-top: 10px;
+  border-collapse: collapse;
+  transition: 0.2s;
 }
 
 .ThemeSelector button {
-    margin-top: 10px;
-    border-radius: 10px;
-    padding: 10px;
-    font-size: 22px;
-    display: inherit;
-    background-color: white;
-    cursor: pointer;
-    width: 250px;
-    border: 2px solid red;
-    transition: 0.3s;
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 22px;
+  display: inherit;
+  background-color: white;
+  cursor: pointer;
+  width: 250px;
+  border: 2px solid red;
+  transition: 0.3s;
 }
 
 .ThemeSelector button:hover {
-    background-color: #31455a;
-    color: white;
-    border: 2px solid yellow;
+  background-color: #31455a;
+  color: white;
+  border: 2px solid yellow;
 }
 
 .Anim1 {
-    animation: Anim1 0.6s forwards;
+  animation: Anim1 0.6s forwards;
 }
 
 .Invisible {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 @keyframes Anim1 {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
 
 .Anim2 {
-    animation: Anim2 0.6s forwards;
+  animation: Anim2 0.6s forwards;
 }
 
 @keyframes Anim2 {
-    0% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 1;
+  }
 
-    100% {
-        opacity: 0;
-    }
+  100% {
+    opacity: 0;
+  }
 }
 
 .GradientAnim2 {
-    background: linear-gradient(238deg, #3d0c7a, #070608);
-    background-size: 400% 400%;
+  background: linear-gradient(238deg, #3d0c7a, #070608);
+  background-size: 400% 400%;
 
-    -webkit-animation: GradientAnim2 20s ease infinite;
-    -moz-animation: GradientAnim2 20s ease infinite;
-    animation: GradientAnim2 20s ease infinite;
+  -webkit-animation: GradientAnim2 20s ease infinite;
+  -moz-animation: GradientAnim2 20s ease infinite;
+  animation: GradientAnim2 20s ease infinite;
 }
 
 @-webkit-keyframes GradientAnim2 {
-    0% {
-        background-position: 0% 91%
-    }
+  0% {
+    background-position: 0% 91%;
+  }
 
-    50% {
-        background-position: 100% 10%
-    }
+  50% {
+    background-position: 100% 10%;
+  }
 
-    100% {
-        background-position: 0% 91%
-    }
+  100% {
+    background-position: 0% 91%;
+  }
 }
 
 @-moz-keyframes GradientAnim2 {
-    0% {
-        background-position: 0% 91%
-    }
+  0% {
+    background-position: 0% 91%;
+  }
 
-    50% {
-        background-position: 100% 10%
-    }
+  50% {
+    background-position: 100% 10%;
+  }
 
-    100% {
-        background-position: 0% 91%
-    }
+  100% {
+    background-position: 0% 91%;
+  }
 }
 
 @keyframes GradientAnim2 {
-    0% {
-        background-position: 0% 91%
-    }
+  0% {
+    background-position: 0% 91%;
+  }
 
-    50% {
-        background-position: 100% 10%
-    }
+  50% {
+    background-position: 100% 10%;
+  }
 
-    100% {
-        background-position: 0% 91%
-    }
+  100% {
+    background-position: 0% 91%;
+  }
 }
 
 .GradientAnim3 {
-    background: linear-gradient(238deg, #f96167, #f9e795);
-    background-size: 400% 400%;
+  background: linear-gradient(238deg, #f96167, #f9e795);
+  background-size: 400% 400%;
 
-    -webkit-animation: GradientAnim3 16s ease infinite;
-    -moz-animation: GradientAnim3 16s ease infinite;
-    animation: GradientAnim3 16s ease infinite;
+  -webkit-animation: GradientAnim3 16s ease infinite;
+  -moz-animation: GradientAnim3 16s ease infinite;
+  animation: GradientAnim3 16s ease infinite;
 }
 
 @-webkit-keyframes GradientAnim3 {
-    0% {
-        background-position: 0% 91%
-    }
+  0% {
+    background-position: 0% 91%;
+  }
 
-    50% {
-        background-position: 100% 10%
-    }
+  50% {
+    background-position: 100% 10%;
+  }
 
-    100% {
-        background-position: 0% 91%
-    }
+  100% {
+    background-position: 0% 91%;
+  }
 }
 
 @-moz-keyframes GradientAnim3 {
-    0% {
-        background-position: 0% 91%
-    }
+  0% {
+    background-position: 0% 91%;
+  }
 
-    50% {
-        background-position: 100% 10%
-    }
+  50% {
+    background-position: 100% 10%;
+  }
 
-    100% {
-        background-position: 0% 91%
-    }
+  100% {
+    background-position: 0% 91%;
+  }
 }
 
 @keyframes GradientAnim3 {
-    0% {
-        background-position: 0% 91%
-    }
+  0% {
+    background-position: 0% 91%;
+  }
 
-    50% {
-        background-position: 100% 10%
-    }
+  50% {
+    background-position: 100% 10%;
+  }
 
-    100% {
-        background-position: 0% 91%
-    }
+  100% {
+    background-position: 0% 91%;
+  }
 }
 
 /* Effects */
 
 .EffectsBtn {
-    position: absolute;
-    position: absolute;
-    top: 40px;
-    right: 50px;
-    font-size: 50px;
-    background: transparent;
-    color: red;
-    transition: 0.2s;
-    border: none;
-    cursor: pointer;
+  position: absolute;
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  font-size: 50px;
+  background: transparent;
+  color: red;
+  transition: 0.2s;
+  border: none;
+  cursor: pointer;
 }
 
 .EffectsBtn:hover {
-    color: blue;
+  color: blue;
 }
 
 .EffectSelector {
-    position: absolute;
-    top: 90px;
-    right: 30px;
-    margin-top: 10px;
-    border-collapse: collapse;
-    transition: 0.2s;
+  position: absolute;
+  top: 90px;
+  right: 30px;
+  margin-top: 10px;
+  border-collapse: collapse;
+  transition: 0.2s;
 }
 
 .EffectSelector button {
-    margin-top: 10px;
-    border-radius: 10px;
-    padding: 10px;
-    font-size: 22px;
-    display: inherit;
-    background-color: white;
-    cursor: pointer;
-    width: 220px;
-    border: 2px solid red;
-    transition: 0.3s;
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 22px;
+  display: inherit;
+  background-color: white;
+  cursor: pointer;
+  width: 220px;
+  border: 2px solid red;
+  transition: 0.3s;
 }
 
 .EffectSelector button:hover {
-    background-color: #31455a;
-    color: white;
-    border: 2px solid yellow;
+  background-color: #31455a;
+  color: white;
+  border: 2px solid yellow;
 }
 
 #background-wrap {
-    bottom: 0;
-    left: 0;
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: -1;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: -1;
 }
 
 /* KEYFRAMES */
 
 @-webkit-keyframes animateBubble {
-    0% {
-        margin-top: 1000px;
-    }
+  0% {
+    margin-top: 1000px;
+  }
 
-    100% {
-        margin-top: -100%;
-    }
+  100% {
+    margin-top: -100%;
+  }
 }
 
 @-moz-keyframes animateBubble {
-    0% {
-        margin-top: 1000px;
-    }
+  0% {
+    margin-top: 1000px;
+  }
 
-    100% {
-        margin-top: -100%;
-    }
+  100% {
+    margin-top: -100%;
+  }
 }
 
 @keyframes animateBubble {
-    0% {
-        margin-top: 1000px;
-    }
+  0% {
+    margin-top: 1000px;
+  }
 
-    100% {
-        margin-top: -100%;
-    }
+  100% {
+    margin-top: -100%;
+  }
 }
 
 @-webkit-keyframes sideWays {
-    0% {
-        margin-left: 0px;
-    }
+  0% {
+    margin-left: 0px;
+  }
 
-    100% {
-        margin-left: 50px;
-    }
+  100% {
+    margin-left: 50px;
+  }
 }
 
 @-moz-keyframes sideWays {
-    0% {
-        margin-left: 0px;
-    }
+  0% {
+    margin-left: 0px;
+  }
 
-    100% {
-        margin-left: 50px;
-    }
+  100% {
+    margin-left: 50px;
+  }
 }
 
 @keyframes sideWays {
-    0% {
-        margin-left: 0px;
-    }
+  0% {
+    margin-left: 0px;
+  }
 
-    100% {
-        margin-left: 50px;
-    }
+  100% {
+    margin-left: 50px;
+  }
 }
 
 /* ANIMATIONS */
 
 .x1 {
-    -webkit-animation: animateBubble 16s linear infinite, sideWays 2s ease-in-out infinite alternate;
-    -moz-animation: animateBubble 16s linear infinite, sideWays 2s ease-in-out infinite alternate;
-    animation: animateBubble 16s linear infinite, sideWays 2s ease-in-out infinite alternate;
+  -webkit-animation: animateBubble 16s linear infinite,
+    sideWays 2s ease-in-out infinite alternate;
+  -moz-animation: animateBubble 16s linear infinite,
+    sideWays 2s ease-in-out infinite alternate;
+  animation: animateBubble 16s linear infinite,
+    sideWays 2s ease-in-out infinite alternate;
 
-    left: -5%;
-    top: 5%;
+  left: -5%;
+  top: 5%;
 
-    -webkit-transform: scale(0.6);
-    -moz-transform: scale(0.6);
-    transform: scale(0.6);
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  transform: scale(0.6);
 }
 
 .x2 {
-    -webkit-animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
-    -moz-animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
-    animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+  -webkit-animation: animateBubble 20s linear infinite,
+    sideWays 4s ease-in-out infinite alternate;
+  -moz-animation: animateBubble 20s linear infinite,
+    sideWays 4s ease-in-out infinite alternate;
+  animation: animateBubble 20s linear infinite,
+    sideWays 4s ease-in-out infinite alternate;
 
-    left: 5%;
-    top: 80%;
+  left: 5%;
+  top: 80%;
 
-    -webkit-transform: scale(0.4);
-    -moz-transform: scale(0.4);
-    transform: scale(0.4);
+  -webkit-transform: scale(0.4);
+  -moz-transform: scale(0.4);
+  transform: scale(0.4);
 }
 
 .x3 {
-    -webkit-animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
-    -moz-animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
-    animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
+  -webkit-animation: animateBubble 28s linear infinite,
+    sideWays 2s ease-in-out infinite alternate;
+  -moz-animation: animateBubble 28s linear infinite,
+    sideWays 2s ease-in-out infinite alternate;
+  animation: animateBubble 28s linear infinite,
+    sideWays 2s ease-in-out infinite alternate;
 
-    left: 10%;
-    top: 40%;
+  left: 10%;
+  top: 40%;
 
-    -webkit-transform: scale(0.7);
-    -moz-transform: scale(0.7);
-    transform: scale(0.7);
+  -webkit-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+  transform: scale(0.7);
 }
 
 .x4 {
-    -webkit-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
-    -moz-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
-    animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+  -webkit-animation: animateBubble 22s linear infinite,
+    sideWays 3s ease-in-out infinite alternate;
+  -moz-animation: animateBubble 22s linear infinite,
+    sideWays 3s ease-in-out infinite alternate;
+  animation: animateBubble 22s linear infinite,
+    sideWays 3s ease-in-out infinite alternate;
 
-    left: 20%;
-    top: 0;
+  left: 20%;
+  top: 0;
 
-    -webkit-transform: scale(0.3);
-    -moz-transform: scale(0.3);
-    transform: scale(0.3);
+  -webkit-transform: scale(0.3);
+  -moz-transform: scale(0.3);
+  transform: scale(0.3);
 }
 
 .x5 {
-    -webkit-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
-    -moz-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
-    animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+  -webkit-animation: animateBubble 29s linear infinite,
+    sideWays 4s ease-in-out infinite alternate;
+  -moz-animation: animateBubble 29s linear infinite,
+    sideWays 4s ease-in-out infinite alternate;
+  animation: animateBubble 29s linear infinite,
+    sideWays 4s ease-in-out infinite alternate;
 
-    left: 30%;
-    top: 50%;
+  left: 30%;
+  top: 50%;
 
-    -webkit-transform: scale(0.5);
-    -moz-transform: scale(0.5);
-    transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  transform: scale(0.5);
 }
 
 .x6 {
-    -webkit-animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
-    -moz-animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
-    animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
+  -webkit-animation: animateBubble 21s linear infinite,
+    sideWays 2s ease-in-out infinite alternate;
+  -moz-animation: animateBubble 21s linear infinite,
+    sideWays 2s ease-in-out infinite alternate;
+  animation: animateBubble 21s linear infinite,
+    sideWays 2s ease-in-out infinite alternate;
 
-    left: 50%;
-    top: 0;
+  left: 50%;
+  top: 0;
 
-    -webkit-transform: scale(0.8);
-    -moz-transform: scale(0.8);
-    transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  transform: scale(0.8);
 }
 
 .x7 {
-    -webkit-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
-    -moz-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
-    animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+  -webkit-animation: animateBubble 20s linear infinite,
+    sideWays 2s ease-in-out infinite alternate;
+  -moz-animation: animateBubble 20s linear infinite,
+    sideWays 2s ease-in-out infinite alternate;
+  animation: animateBubble 20s linear infinite,
+    sideWays 2s ease-in-out infinite alternate;
 
-    left: 65%;
-    top: 70%;
+  left: 65%;
+  top: 70%;
 
-    -webkit-transform: scale(0.4);
-    -moz-transform: scale(0.4);
-    transform: scale(0.4);
+  -webkit-transform: scale(0.4);
+  -moz-transform: scale(0.4);
+  transform: scale(0.4);
 }
 
 .x8 {
-    -webkit-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
-    -moz-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
-    animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+  -webkit-animation: animateBubble 22s linear infinite,
+    sideWays 3s ease-in-out infinite alternate;
+  -moz-animation: animateBubble 22s linear infinite,
+    sideWays 3s ease-in-out infinite alternate;
+  animation: animateBubble 22s linear infinite,
+    sideWays 3s ease-in-out infinite alternate;
 
-    left: 80%;
-    top: 10%;
+  left: 80%;
+  top: 10%;
 
-    -webkit-transform: scale(0.3);
-    -moz-transform: scale(0.3);
-    transform: scale(0.3);
+  -webkit-transform: scale(0.3);
+  -moz-transform: scale(0.3);
+  transform: scale(0.3);
 }
 
 .x9 {
-    -webkit-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
-    -moz-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
-    animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+  -webkit-animation: animateBubble 29s linear infinite,
+    sideWays 4s ease-in-out infinite alternate;
+  -moz-animation: animateBubble 29s linear infinite,
+    sideWays 4s ease-in-out infinite alternate;
+  animation: animateBubble 29s linear infinite,
+    sideWays 4s ease-in-out infinite alternate;
 
-    left: 90%;
-    top: 50%;
+  left: 90%;
+  top: 50%;
 
-    -webkit-transform: scale(0.6);
-    -moz-transform: scale(0.6);
-    transform: scale(0.6);
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  transform: scale(0.6);
 }
 
 .x10 {
-    -webkit-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
-    -moz-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
-    animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+  -webkit-animation: animateBubble 26s linear infinite,
+    sideWays 2s ease-in-out infinite alternate;
+  -moz-animation: animateBubble 26s linear infinite,
+    sideWays 2s ease-in-out infinite alternate;
+  animation: animateBubble 26s linear infinite,
+    sideWays 2s ease-in-out infinite alternate;
 
-    left: 80%;
-    top: 80%;
+  left: 80%;
+  top: 80%;
 
-    -webkit-transform: scale(0.3);
-    -moz-transform: scale(0.3);
-    transform: scale(0.3);
+  -webkit-transform: scale(0.3);
+  -moz-transform: scale(0.3);
+  transform: scale(0.3);
 }
 
 /* OBJECTS */
 
 .bubble {
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 
-    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 20px 5px rgba(255, 255, 255, 1);
-    -moz-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 20px 5px rgba(255, 255, 255, 1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 20px 5px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2),
+    inset 0px 10px 20px 5px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2),
+    inset 0px 10px 20px 5px rgba(255, 255, 255, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2),
+    inset 0px 10px 20px 5px rgba(255, 255, 255, 1);
 
-    height: 200px;
-    position: absolute;
-    width: 200px;
+  height: 200px;
+  position: absolute;
+  width: 200px;
 }
 
 .bubble:after {
-    background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
-    /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255, 255, 255, 0.5)), color-stop(70%, rgba(255, 255, 255, 0)));
-    /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
-    /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
-    /* IE10+ */
-    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
-    /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80ffffff', endColorstr='#00ffffff', GradientType=1);
-    /* IE6-9 fallback on horizontal gradient */
+  background: -moz-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  /* FF3.6+ */
+  background: -webkit-gradient(
+    radial,
+    center center,
+    0px,
+    center center,
+    100%,
+    color-stop(0%, rgba(255, 255, 255, 0.5)),
+    color-stop(70%, rgba(255, 255, 255, 0))
+  );
+  /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  /* Opera 12+ */
+  background: -ms-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  /* IE10+ */
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80ffffff', endColorstr='#00ffffff', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
 
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 
-    -webkit-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
-    -moz-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
-    box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+  -moz-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
 
-    content: "";
-    height: 180px;
-    left: 10px;
-    position: absolute;
-    width: 180px;
+  content: "";
+  height: 180px;
+  left: 10px;
+  position: absolute;
+  width: 180px;
 }
 
 .Dot {
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 
-    background-color: red;
+  background-color: red;
 
-    height: 70px;
-    position: absolute;
-    width: 70px;
+  height: 70px;
+  position: absolute;
+  width: 70px;
 }
 
 .Dot:after {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80ffffff', endColorstr='#00ffffff', GradientType=1);
 
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80ffffff', endColorstr='#00ffffff', GradientType=1);
-    /* IE6-9 fallback on horizontal gradient */
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-
-
-    content: "";
-    height: 180px;
-    left: 10px;
-    position: absolute;
-    width: 180px;
+  content: "";
+  height: 180px;
+  left: 10px;
+  position: absolute;
+  width: 180px;
 }
 
 /* Responsive */
 
 .ThemeEffectBtn {
-    position: absolute;
-    top: -90px;
-    right: 45%;
-    font-size: 50px;
-    background: transparent;
-    color: red;
-    transition: 0.2s;
-    border: none;
-    cursor: pointer;
+  position: absolute;
+  top: -90px;
+  right: 45%;
+  font-size: 50px;
+  background: transparent;
+  color: red;
+  transition: 0.2s;
+  border: none;
+  cursor: pointer;
 }
 
 .ThemeEffectBtn:hover {
-    color: blue;
+  color: blue;
 }
 
 .BTNMobile {
-    margin-top: 10px;
-    border-radius: 10px;
-    padding: 8px;
-    font-size: 16px;
-    display: inherit;
-    background-color: white;
-    cursor: pointer;
-    width: 180px;
-    border: 2px solid red;
-    transition: 0.3s;
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 8px;
+  font-size: 16px;
+  display: inherit;
+  background-color: white;
+  cursor: pointer;
+  width: 180px;
+  border: 2px solid red;
+  transition: 0.3s;
 }
 
 .BTNMobile:hover {
-    background-color: #31455a;
-    color: white;
-    border: 2px solid yellow;
+  background-color: #31455a;
+  color: white;
+  border: 2px solid yellow;
 }
 
 .BTNMobile:active {
-    background-color: #232a31;
-    color: white;
-    border: 2px solid yellow;
+  background-color: #232a31;
+  color: white;
+  border: 2px solid yellow;
 }
-/*  */
+/* offcanvas */
+
+.offcanvas {
+  width: 0;
+}
+.offcanvas.active {
+  opacity: 0.95;
+  padding: 30px;
+  transition: 0.3s width;
+  width: 100%;
+  max-width: 450px;
+  height: 100%;
+  background-color: gainsboro;
+  position: fixed;
+  right: 0;
+  z-index: 999;
+}
+.ToggleBTN {
+  background-color: transparent;
+  border: 0;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 40px;
+  justify-content: center;
+  flex-direction: column;
+  height: 66px;
+  width: 66px;
+  padding: 10px;
+  cursor: pointer;
+}
+.ToggleBTNTop,
+.ToggleBTNMiddle,
+.ToggleBTNBottom {
+  width: 100%;
+  height: 5px;
+  background-color: red;
+  border-radius: 5px;
+  transition: 0.2s all;
+}
+.ToggleBTNBottom.active {
+  transform: rotate(45deg);
+}
+.ToggleBTNTop.active {
+  transform: translateY(22px) rotate(-45deg);
+}
+.ToggleBTNMiddle.active {
+  opacity: 0;
+}
+.EffectsOffcanvas {
+  margin-top: 10px;
+}
+.closeOffcanvasBTN{
+  opacity: 0;
+  transition: 0.1s;
+  right: 0;
+  cursor: pointer;
+}
+.offcanvas.active .closeOffcanvasBTN{
+  position: absolute;
+  opacity: 1;
+  right: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  gap: 4px;
+}
+.closeOffcanvasBTN .Top ,.closeOffcanvasBTN .Bottom{
+  width: 100%;
+  height: 5px;
+  background-color: red;
+}
+.closeOffcanvasBTN .Top{
+  transform: translateY(10px) rotate(-45deg);
+}
+.closeOffcanvasBTN .Bottom{
+  transform: rotate(45deg);
+}
