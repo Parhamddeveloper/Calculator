@@ -1,5 +1,4 @@
 # Calculator with themes and effects
-**This repository uses copyright**
 
 ___
 
